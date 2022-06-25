@@ -4,33 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz App</title>
+    <title>JavaScript Interview Quiz</title>
+
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="quizApp">
-      <h1>JavaScript Interview Quiz App</h1>
+      <h1>JavaScript Interview Quiz</h1>
       <div class="quiz-container">
-        <h2 class="quiz-question">Question</h2>
-        <ul>
+        <h2 id="quiz-question">Question</h2>
+        <ul class="answer-list">
           <li>
-            <input type="radio" name="" id="a" />
+            <input type="radio" class="answerQ" name="answerQ" id="a" />
             <label id="answer-title-1" for="a">Answer 1</label>
           </li>
           <li>
-            <input type="radio" name="" id="b" />
+            <input type="radio" class="answerQ" name="answerQ" id="b" />
             <label id="answer-title-2" for="b">Answer 2</label>
           </li>
           <li>
-            <input type="radio" name="" id="c" />
+            <input type="radio" class="answerQ" name="answerQ" id="c" />
             <label id="answer-title-3" for="c">Answer 3</label>
           </li>
           <li>
-            <input type="radio" name="" id="d" />
+            <input type="radio" class="answerQ" name="answerQ" id="d" />
             <label id="answer-title-4" for="d">Answer 4</label>
           </li>
+          <button onclick="submitAnswer()">Submit</button>
         </ul>
-        <button onclick="submitAnswer()"></button>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

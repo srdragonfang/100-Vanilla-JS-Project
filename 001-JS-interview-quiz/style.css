@@ -1,0 +1,128 @@
+:root {
+  --clr-light: #f9f9f9;
+  --clr-dark: #191919;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 2rem 2rem;
+}
+
+li {
+  list-style-type: none;
+}
+li + li {
+  margin-top: 0.5rem;
+}
+/* .quizApp {
+} */
+.quiz-container {
+  padding: 2rem 3rem;
+  background: #fca5a5;
+  box-shadow: 2px 15px 15px #1919198d;
+  border-radius: 30px;
+}
+.quizApp h1 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.quizApp h2 {
+  text-align: center;
+  width: 100%;
+  margin: 1rem 0 2rem;
+}
+.answer-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.answer-list li {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: #f8717185;
+  border-radius: 50px;
+}
+.answer-list li label {
+  color: var(--clr-light) !important;
+}
+.answer-list [type="radio"]:checked,
+.answer-list [type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+.answer-list [type="radio"]:checked + label,
+.answer-list [type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #666;
+}
+.answer-list [type="radio"]:checked + label:before,
+.answer-list [type="radio"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  background: #fff;
+}
+.answer-list [type="radio"]:checked + label:after,
+.answer-list [type="radio"]:not(:checked) + label:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #f87171a3;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.answer-list [type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.answer-list [type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.answer-list button {
+  outline: none;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 2.25rem;
+  margin-top: 1rem;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.839);
+  box-shadow: 2px 4px 8px #19191975;
+}
