@@ -2,6 +2,7 @@
 // 1. thuc hien su kien khi click vao seat
 // 2. dem so seat khi thuc hien event select
 // 3. tinh tong so tien phai tra dua vao gia ve phim
+// 4. thay doi gia tien ve xem phim
 
 const seats = document.querySelectorAll(".seat:not(.occupied)");
 const occupieds = document.querySelectorAll(".seat.occupied");
@@ -9,12 +10,8 @@ const count = document.getElementById("count");
 const total = document.getElementById("total");
 const movieSelect = document.getElementById("movie");
 
-let ticketPrice = movieSelect.value;
+let ticketPrice = +movieSelect.value;
 console.log(ticketPrice);
-// console.log(seatSelecteds);
-
-// console.log(seatSelecteds.length);
-// if(seats.constants(".selected"))
 loadSeats();
 function loadSeats() {
   seats.forEach((seat) => {
@@ -31,3 +28,8 @@ function selectedCount() {
   count.innerText = seatSelecteds.length;
   total.innerText = seatSelecteds.length * ticketPrice;
 }
+
+movieSelect.addEventListener("change", (e) => {
+  ticketPrice = e.target.value;
+  selectedCount();
+});
