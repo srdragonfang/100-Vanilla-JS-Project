@@ -1,11 +1,11 @@
 const interviewQuiz = [
   {
-    question: "Question 1?",
-    a: "It's a",
-    b: "It's b",
-    c: "It's c",
-    d: "It's d",
-    correct: "a",
+    question: "JavaScript có bao nhiêu loại khai báo biến?",
+    a: "1",
+    b: "2",
+    c: "3",
+    d: "4",
+    correct: "c",
   },
   {
     question: "Question 2?",

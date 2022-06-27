@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/scss/index.css" />
+  </head>
+  <body>
+    <!-- <section class="section loader"></section> -->
+    <section id="dashboard" class="section section-dashboard flex-col">
+      <row></row>
+      <row>
+        <div>
+          <label for="">Times:</label>
+          <button id="option-1" class="btn btn-option" value="10">
+            10 minutes
+          </button>
+          <button id="option-2" class="btn btn-option" value="15">
+            15 minutes
+          </button>
+          <button id="option-3" class="btn btn-option" value="25">
+            25 minutes
+          </button>
+          <input type="text" name="" id="option-4" value="custom" />
+        </div>
+        <div>
+          <label for="">Numbers:</label>
+          <button id="option-5" class="btn btn-option" value="25">25</button>
+          <button id="option-6" class="btn btn-option" value="50">50</button>
+          <button id="option-7" class="btn btn-option" value="100">100</button>
+          <input type="text" name="" id="option-8" value="custom" />
+        </div>
+      </row>
+      <row>
+        <button
+          id="option"
+          class="btn btn-option"
+          value=""
+          type="submit"
+          onclick="submit()"
+        >
+          Submit
+        </button>
+      </row>
+    </section>
+    <section id="quiz" class="section section-quiz hidden">
+      <div class="quiz-info"></div>
+      <div class="quiz-container flex-container">
+        <div class="quiz-timer flex-row">
+          <div class="timer-minus">25</div>
+          <div class="timer-break">:</div>
+          <div class="timer-seconds">00</div>
+        </div>
+        <div class="quiz-questions">
+          <div id="question">Question 1</div>
+          <div class="answers">
+            <div class="show" id="answers-4option">
+              <ul>
+                <li class="answer-option active">
+                  <input type="radio" name="answers" id="a" />
+                  <label for="a" class="answer" id="answer-1">Answer A</label>
+                </li>
+                <li class="answer-option">
+                  <input type="radio" name="answers" id="b" />
+                  <label for="b" class="answer" id="answer-2">Answer B</label>
+                </li>
+                <li class="answer-option">
+                  <input type="radio" name="answers" id="c" />
+                  <label for="c" class="answer" id="answer-3">Answer C</label>
+                </li>
+                <li class="answer-option">
+                  <input type="radio" name="answers" id="d" />
+                  <label for="d" class="answer" id="answer-4">Answer D</label>
+                </li>
+              </ul>
+            </div>
+            <div class="hidden" id="answers-2option">
+              <ul>
+                <button class="answer btn btn-option" id="answer-5">
+                  True
+                </button>
+                <button class="answer btn btn-option" id="answer-6">
+                  False
+                </button>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

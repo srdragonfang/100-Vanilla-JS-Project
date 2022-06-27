@@ -1,0 +1,20 @@
+#question {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.answer-option {
+  padding: 1rem 2rem;
+  background: #13c29c;
+  min-width: 400px;
+  opacity: 70%;
+  &:hover {
+    opacity: 100%;
+  }
+  &.active {
+    opacity: 1;
+  }
+}
+.answer-option + .answer-option {
+  margin-top: 1rem;
+}
