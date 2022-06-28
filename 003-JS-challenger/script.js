@@ -10,12 +10,12 @@ const quizData = [
   },
   {
     question: "Question 02",
-    a: "Its a",
-    b: "Its b",
-    c: "Its c",
-    d: "Its d",
-    type: "none",
-    correct: "a",
+    a: "",
+    b: "",
+    c: "",
+    d: "",
+    type: "boolean",
+    correct: "true",
   },
   {
     question: "Question 03",
@@ -73,6 +73,8 @@ function loadQuestion() {
     question.innerHTML =
       "Question " + countQuestion + ": " + currentQuestion.question;
     if (currentQuestion.type === "none") {
+      answers4option.style.display = "flex";
+      answers2option.style.display = "none";
       answer1.innerHTML = currentQuestion.a;
       answer2.innerHTML = currentQuestion.b;
       answer3.innerHTML = currentQuestion.c;
