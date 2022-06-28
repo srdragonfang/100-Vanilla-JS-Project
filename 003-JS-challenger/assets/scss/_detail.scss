@@ -1,3 +1,7 @@
+.quiz-questions {
+  background-color: #eef183;
+}
+
 #question {
   font-size: 3rem;
   margin-bottom: 2rem;
@@ -11,9 +15,9 @@
   &:hover {
     opacity: 100%;
   }
-  &.active {
-    opacity: 1;
-  }
+}
+.selected {
+  background: brown;
 }
 .answer-option + .answer-option {
   margin-top: 1rem;

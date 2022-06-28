@@ -68,6 +68,10 @@ button {
   opacity: 100%;
 }
 
+.quiz-questions {
+  background-color: #eef183;
+}
+
 #question {
   font-size: 3rem;
   margin-bottom: 2rem;
@@ -82,8 +86,9 @@ button {
 .answer-option:hover {
   opacity: 100%;
 }
-.answer-option.active {
-  opacity: 1;
+
+.selected {
+  background: brown;
 }
 
 .answer-option + .answer-option {

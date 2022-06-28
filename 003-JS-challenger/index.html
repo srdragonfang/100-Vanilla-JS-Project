@@ -49,17 +49,18 @@
     <section id="quiz" class="section section-quiz hidden">
       <div class="quiz-info"></div>
       <div class="quiz-container flex-container">
-        <div class="quiz-timer flex-row">
+        <div class="quiz-timer flex-row hidden">
           <div class="timer-minus">25</div>
           <div class="timer-break">:</div>
           <div class="timer-seconds">00</div>
         </div>
         <div class="quiz-questions">
+          <div id="quiz-noti" class="hidden"></div>
           <div id="question">Question 1</div>
-          <div class="answers">
+          <div id="quiz-wrapper" class="answers show">
             <div class="show" id="answers-4option">
               <ul>
-                <li class="answer-option active">
+                <li class="answer-option">
                   <input type="radio" name="answers" id="a" />
                   <label for="a" class="answer" id="answer-1">Answer A</label>
                 </li>
@@ -87,6 +88,15 @@
                 </button>
               </ul>
             </div>
+            <button
+              id="option-2"
+              class="btn btn-option"
+              value=""
+              type="submit"
+              onclick="submitQuestion()"
+            >
+              Submit
+            </button>
           </div>
         </div>
       </div>
