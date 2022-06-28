@@ -1,39 +1,57 @@
-const $ = document.getElementById.bind(document);
+const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-var quizAPI = "./data/data.json";
-// console.log(quizAPI);
+const quizData = [
+  {
+    question: "What are the different data types present in javascript?",
+    a: "Its a",
+    b: "Its b",
+    c: "Its c",
+    d: "Its d",
+    type: "none",
+    correct: "a",
+  },
+  {
+    question: "Question 02",
+    a: "",
+    b: "",
+    c: "",
+    d: "",
+    type: "boolean",
+    correct: "true",
+  },
+  {
+    question: "Question 03",
+    a: "Its a",
+    b: "Its b",
+    c: "Its c",
+    d: "Its d",
+    type: "none",
+    correct: "a",
+  },
+];
+// console.log(quizData);
+const dashboard = document.getElementById("dashboard");
+const quiz = document.getElementById("quiz");
+const quizNoti = document.getElementById("quiz-noti");
+const quizWp = document.getElementById("quiz-wrapper");
 
-async function getPosts() {
-  const res = await fetch(quizAPI);
-
-  const data = await res.json();
-  // console.log(data.quizData);
-  return data.quizData;
-}
-
-const dashboard = $("dashboard");
-const quiz = $("quiz");
-const quizNoti = $("quiz-noti");
-const quizWp = $("quiz-wrapper");
-
-const answers4option = $("answers-4option");
-const answers2option = $("answers-2option");
+const answers4option = document.getElementById("answers-4option");
+const answers2option = document.getElementById("answers-2option");
 // quiz
-const question = $("question");
-const answer1 = $("answer-1"); // a
-const answer2 = $("answer-2"); // b
-const answer3 = $("answer-3"); // c
-const answer4 = $("answer-4"); // d
-const answer5 = $("answer-5"); // true
-const answer6 = $("answer-6"); // false
+const question = document.getElementById("question");
+const answer1 = document.getElementById("answer-1"); // a
+const answer2 = document.getElementById("answer-2"); // b
+const answer3 = document.getElementById("answer-3"); // c
+const answer4 = document.getElementById("answer-4"); // d
+const answer5 = document.getElementById("answer-5"); // true
+const answer6 = document.getElementById("answer-6"); // false
 
 const answers = document.querySelectorAll(".answer-option");
 // console.log(answerSelected.children[0].id);
 // dashboard
 
 // quiz
-function quizApp() {}
 let countQuestion = 0;
 let currentIndex = 0;
 let score = 0;
@@ -47,8 +65,7 @@ function submit() {
   loadQuestion();
 }
 
-async function loadQuestion() {
-  let quizData = await getPosts();
+function loadQuestion() {
   cleanAnswer();
   let currentQuestion = quizData[currentIndex];
   if (currentIndex == quizData.length) {
@@ -90,10 +107,13 @@ function answerSelected() {
 }
 answerSelected();
 
-async function submitQuestion() {
-  let quizData = await getPosts(); // khai báo 2 lần không có ổn lắm - kiểu này thủ công quá.
+function submitQuestion() {
   let answerUserSelected = document.querySelector(".answer-option.selected");
-
+  // console.log(answerSelected.children[0].id);
+  // console.log(quizData[currentIndex].correct);
+  // console.log("currentIndex", currentIndex);
+  // console.log("countQuestion", countQuestion);
+  // console.log("quizData.length", quizData.length);
   if (currentIndex < quizData.length && !!quizData[currentIndex].question) {
     if (
       !!answerUserSelected &&

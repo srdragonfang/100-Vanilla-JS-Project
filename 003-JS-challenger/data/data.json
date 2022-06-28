@@ -1,0 +1,31 @@
+{
+  "quizData": [
+    {
+      "question": "What are the different data types present in javascript?",
+      "a": "Its a",
+      "b": "Its b",
+      "c": "Its c",
+      "d": "Its d",
+      "type": "none",
+      "correct": "a"
+    },
+    {
+      "question": "Question 02",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "boolean",
+      "correct": "true"
+    },
+    {
+      "question": "Question 03",
+      "a": "Its a",
+      "b": "Its b",
+      "c": "Its c",
+      "d": "Its d",
+      "type": "none",
+      "correct": "a"
+    }
+  ]
+}
