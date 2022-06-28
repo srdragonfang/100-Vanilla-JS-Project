@@ -1,6 +1,3 @@
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
-
 const quizData = [
   {
     question: "What are the different data types present in javascript?",
@@ -97,8 +94,10 @@ function cleanAnswer() {
 }
 function answerElSelected() {
   answers.forEach((answerEl) => {
+    if ((answerEl.children[0].checked = false)) {
+      answerEl.classList.remove("selected");
+    }
     answerEl.addEventListener("click", () => {
-      cleanAnswer(); // fix bug old selected option not delete class="seleted"
       answerEl.children[0].checked = true;
       answerEl.classList.add("selected");
     });
@@ -107,7 +106,7 @@ function answerElSelected() {
 answerElSelected();
 
 function submitQuestion() {
-  let answerUserSelected = document.querySelector(".answer-option.selected");
+  let answerSelected = document.querySelector(".answer-option.selected");
   // console.log(answerSelected.children[0].id);
   // console.log(quizData[currentIndex].correct);
   // console.log("currentIndex", currentIndex);
@@ -115,10 +114,12 @@ function submitQuestion() {
   // console.log("quizData.length", quizData.length);
   if (currentIndex < quizData.length && !!quizData[currentIndex].question) {
     if (
-      !!answerUserSelected &&
-      answerUserSelected.children[0].id === quizData[currentIndex].correct
+      !!answerSelected &&
+      answerSelected.children[0].id === quizData[currentIndex].correct
     ) {
+      // console.log(score);
       score += 1;
+      // alert(score);
     }
     currentIndex++;
     countQuestion++;
