@@ -17,6 +17,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: aliceblue;
 }
 li {
   list-style: none;
@@ -25,4 +26,15 @@ li {
 input,
 button {
   font-size: inherit;
+}
+
+.section {
+  width: 50vw;
+  // height: 70vh;
+  padding: 1rem;
+}
+.row {
+  margin-bottom: 1rem;
+  float: left;
+  width: 100%;
 }

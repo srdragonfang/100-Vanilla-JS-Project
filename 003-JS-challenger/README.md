@@ -12,6 +12,7 @@
 # Day 3 - upnext
 
 [0] fetch quizData from data.json
+[0] feat - add buttons export question and ranker
 [] css app
 [] set timer
 [] set option - quiz number

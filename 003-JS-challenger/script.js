@@ -31,10 +31,12 @@ const answer6 = $("answer-6"); // false
 const answers = document.querySelectorAll(".answer-option");
 // console.log(answerSelected.children[0].id);
 // dashboard
+const quizExport = $("quiz-export");
+const allQuestions = $("option-7");
 
 // quiz
 function quizApp() {}
-let countQuestion = 0;
+let countQuestion = 1;
 let currentIndex = 0;
 let score = 0;
 
@@ -51,11 +53,17 @@ async function loadQuestion() {
   let quizData = await getPosts();
   cleanAnswer();
   let currentQuestion = quizData[currentIndex];
-  if (currentIndex == quizData.length) {
+  if (
+    currentIndex == quizData.length ||
+    quizData[currentIndex].question == "" // end quiz when get question = ''
+  ) {
     quizWp.style.display = "none";
     question.innerHTML = `End Quiz. Your Score: ${score}`;
-  }
-  if (currentIndex < quizData.length && !!quizData[currentIndex].question) {
+    quizExport.style.display = "flex";
+  } else if (
+    currentIndex < quizData.length &&
+    !!quizData[currentIndex].question
+  ) {
     question.innerHTML =
       "Question " + countQuestion + ": " + currentQuestion.question;
     if (currentQuestion.type === "none") {
@@ -91,7 +99,7 @@ function answerSelected() {
 answerSelected();
 
 async function submitQuestion() {
-  let quizData = await getPosts(); // khai báo 2 lần không có ổn lắm - kiểu này thủ công quá.
+  let quizData = await getPosts(); // khai báo 2 lần không có ổn lắm - kiểu này thủ công qu
   let answerUserSelected = document.querySelector(".answer-option.selected");
 
   if (currentIndex < quizData.length && !!quizData[currentIndex].question) {

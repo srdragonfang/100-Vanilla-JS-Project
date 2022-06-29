@@ -11,52 +11,52 @@
   <body>
     <!-- <section class="section loader"></section> -->
     <section id="dashboard" class="section section-dashboard flex-col">
-      <row></row>
-      <row>
-        <div>
-          <label for="">Times:</label>
-          <button id="option-1" class="btn btn-option" value="10">
-            10 minutes
-          </button>
-          <button id="option-2" class="btn btn-option" value="15">
-            15 minutes
-          </button>
-          <button id="option-3" class="btn btn-option" value="25">
-            25 minutes
-          </button>
-          <input type="text" name="" id="option-4" value="custom" />
-        </div>
-        <div>
-          <label for="">Numbers:</label>
-          <button id="option-5" class="btn btn-option" value="25">25</button>
-          <button id="option-6" class="btn btn-option" value="50">50</button>
-          <button id="option-7" class="btn btn-option" value="100">100</button>
-          <input type="text" name="" id="option-8" value="custom" />
-        </div>
-      </row>
-      <row>
-        <button
-          id="option"
+      <div class="row">
+        <label for="">Times:</label>
+        <button id="option-1" class="btn btn-option" value="10">10 mins</button>
+        <button id="option-2" class="btn btn-option" value="15">15 mins</button>
+        <button id="option-3" class="btn btn-option" value="25">25 mins</button>
+        <input
+          type="text"
           class="btn btn-option"
-          value=""
-          type="submit"
-          onclick="submit()"
-        >
-          Submit
-        </button>
-      </row>
+          name=""
+          id="option-4"
+          value="custom"
+        />
+      </div>
+      <div class="row">
+        <label for="">Numbers:</label>
+        <button id="option-5" class="btn btn-option" value="25">25</button>
+        <button id="option-6" class="btn btn-option" value="50">50</button>
+        <button id="option-7" class="btn btn-option" value="100">All</button>
+        <input
+          type="text"
+          class="btn btn-option"
+          name=""
+          id="option-8"
+          value="custom"
+        />
+      </div>
+      <button
+        id="option"
+        class="btn btn-option"
+        value=""
+        type="submit"
+        onclick="submit()"
+      >
+        Submit
+      </button>
     </section>
     <section id="quiz" class="section section-quiz hidden">
       <div class="quiz-info"></div>
-      <div class="quiz-container flex-container">
-        <div class="quiz-timer flex-row hidden">
-          <div class="timer-minus">25</div>
-          <div class="timer-break">:</div>
-          <div class="timer-seconds">00</div>
-        </div>
+      <div class="quiz-container">
         <div class="quiz-questions">
-          <div id="quiz-noti" class="hidden"></div>
-          <div id="question">Question 1</div>
+          <div id="quiz-noti" class="flex-row">
+            <div id="question">Question 1</div>
+            <div class="quiz-timer hidden">
+              <div class="timer-seconds">00</div>
+            </div>
+          </div>
           <div id="quiz-wrapper" class="answers show">
             <div class="show" id="answers-4option">
               <ul>
@@ -99,6 +99,10 @@
             >
               Submit
             </button>
+          </div>
+          <div id="quiz-export" class="hidden">
+            <button class="btn btn-option">Xem Bảng Câu Hỏi</button>
+            <button class="btn btn-option">Ranker</button>
           </div>
         </div>
         <!-- <div class="quiz-export" id="quizExport"></div> -->

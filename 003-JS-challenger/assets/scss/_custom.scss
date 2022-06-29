@@ -22,9 +22,11 @@
 .btn {
   outline: none;
   border: none;
+
   //   background: transparent;
   &-option {
     padding: 1rem 2rem;
+    max-width: 150px;
     &:hover {
       background: #191919;
       color: #f9f9f9;
@@ -36,4 +38,7 @@
       opacity: 100%;
     }
   }
+}
+.row .btn {
+  margin: 1rem;
 }

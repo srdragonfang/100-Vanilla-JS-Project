@@ -1,29 +1,1719 @@
 {
   "quizData": [
     {
-      "question": "What are the different data types present in javascript?",
+      "question": "What is JavaScript?",
       "a": "Its a",
       "b": "Its b",
       "c": "Its c",
       "d": "Its d",
       "type": "none",
-      "correct": "a"
+      "correct": "a",
+      "level": "",
+      "topic": "",
+      "description": ""
     },
     {
-      "question": "Question 02",
+      "question": "Các kiểu dữ liệu trong JavaScript bao gồm: boolean, string, number, undefined?",
+      "type": "boolean",
+      "correct": "false",
+      "level": "",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "const dùng để khai báo một hằng số – là một giá trị không thay đổi được trong suốt quá trình chạy?",
+      "type": "boolean",
+      "correct": "true",
+      "level": "",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "let tạo ra một biến chỉ có thể truy cập được trong block bao quanh nó?",
+      "type": "boolean",
+      "correct": "true",
+      "level": "",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "var – tạo ra một biến có phạm vi truy cập xuyên suốt function chứa nó?",
+      "type": "boolean",
+      "correct": "true",
+      "level": "",
+      "topic": "Function",
+      "description": ""
+    },
+    {
+      "question": "Hàm delete loại bỏ một thuộc tính khỏi object; nếu không tồn tại tham chiếu tới thuộc tính, nó sẽ tự động giải phóng? True or False?",
+      "type": "boolean",
+      "correct": "true",
+      "level": "",
+      "topic": "Object",
+      "description": ""
+    },
+    {
+      "question": "Strict mode trong javascript là gì?",
+      "a": "Strict Mode là một quy mẫu nghiêm khắc trong Javascript. Nếu như việc viết code bình thường là Normal mode, thì Strict Mode sẽ có thêm các quy định khác so với Normal mode.",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "level": "",
+      "topic": "MISC",
+      "description": ""
+    },
+    {
+      "question": "this trong javascript là gì?",
+      "a": "",
+      "b": "",
+      "c": "Từ khóa this dùng để chỉ đối tượng từ nơi nó được gọi.",
+      "d": "",
+      "type": "none",
+      "correct": "c",
+      "level": "",
+      "topic": "Expressions & operators",
+      "description": ""
+    },
+    {
+      "question": "Khác nhau giữa undefined và null trong javascript?",
+      "a": "",
+      "b": "Khi tạo ra một biến mà không gán giá trị thì nó sẽ là undefined. Còn null là một object",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "b",
+      "level": "",
+      "topic": "Object",
+      "description": ""
+    },
+    {
+      "question": "== và === khác nhau như thế nào?",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "Toán tử == kiểm tra tính bằng nhau, còn === kiểm tra cả tính bằng nhau và cả kiểu dữ liệu",
+      "type": "none",
+      "correct": "d",
+      "level": "Intermediate",
+      "topic": "Tutorial",
+      "description": ""
+    },
+    {
+      "question": "Thay đổi style/class của element?",
+      "a": "",
+      "b": "",
+      "c": "Sử dụng thuộc tính document trong javascript. Có thể sử dụng với id, class hay bất cứ element nào.",
+      "d": "",
+      "type": "none",
+      "correct": "c",
+      "level": "",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Math.max() nhỏ hơn Math.min()?",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "Khi chạy code Math.max() > Math.min(), giá trị trả về là False, nghe có vẻ không hợp lý. Tuy nhiên, nếu không có tham số nào được truyền vào, Math.min() trả về Infinity và Math.max() trả về -Infinity. Vậy nên Math.max() < Math.min().",
+      "type": "none",
+      "correct": "d",
+      "level": "",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Closure trong javascript là gì?",
+      "a": "Closure là một hàm bên trong, truy cập đến các giá trị bên ngoài phạm vi của nó. Closure có thể truy cập vào các biến trong phạm vi của riêng nó (Variables in their own scope), trong hàm (Variables in the function’s scope), và biến toàn cục (Global variables).",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "level": "",
+      "topic": "Function",
+      "description": ""
+    },
+    {
+      "question": "Hoisting trong javascript là gì?",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "Hoisting là hành động mặc định của Javascript, nó sẽ chuyển phần khai báo lên phía trên top Trong Javascript, một biến (variable) có thể được khai báo sau khi được sử dụng.",
+      "type": "none",
+      "correct": "d",
+      "level": "",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Phân biệt giữa Function Declaration và Function Expression",
+      "a": "",
+      "b": "",
+      "c": "Function declaration sẽ sử dụng từ khóa function rồi đến tên hàm. Còn Function expression sẽ được bắt đầu với từ khóa var, const, hoặc let.",
+      "d": "",
+      "type": "none",
+      "correct": "c",
+      "level": "",
+      "topic": "Function",
+      "description": ""
+    },
+    {
+      "question": "Hàm Array.splice() và hàm Array.slice() khác nhau như thế nào?",
+      "a": "",
+      "b": "",
+      "c": "Hàm Array.splice() sẽ thay thế một hoặc một số phần tử của mảng bằng một hoặc một số phần tử khác. Trong khi hàm Array.slice() sẽ trích xuất một số phần tử của mảng, vị trí bắt đầu và kết thúc việc trích xuất sẽ được xác định bởi tham số truyền vào hàm. Lưu ý hàm sẽ trích xuất không bao gồm phần tử end truyền vào.",
+      "d": "",
+      "type": "none",
+      "correct": "c",
+      "level": "",
+      "topic": "Array",
+      "description": ""
+    },
+    {
+      "question": "Spread Operator trong javascript?",
+      "a": "",
+      "b": "Spread operator là một biểu thức mở rộng giúp gộp các phần tử vào trong một cách viết ngắn gọn hơn. Cách viết này được thể hiện bằng dấu ...",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "b",
+      "level": "",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Function là gì?",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "Function hay còn gọi là hàm, bản chất nó là một đoạn code được dùng để thực thi một nhiệm vụ nào đó. Các đoạn code bên trong một function được gọi là function body, các đoạn code này sẽ không được biên dịch cho đến khi nào function đó được gọi.",
+      "type": "none",
+      "correct": "",
+      "level": "",
+      "topic": "Function",
+      "description": ""
+    },
+    {
+      "question": "Anonymous function là gì ?",
+      "a": "Là một hàm ẩn danh, không có tên gọi, thường được sử dụng khi xử lý các công việc có quy mô nhỏ, vì thế không cần thiết phải khởi tạo tên định danh cho hàm này. Giúp nó có tốc độ xử lý nhanh hơn hàm truyền thống phải có tên định danh.",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "level": "",
+      "topic": "Function",
+      "description": ""
+    },
+    {
+      "question": "Tại sao 0.1 + 0.2 không bằng 0.3?",
+      "a": "",
+      "b": "",
+      "c": "Vấn đề này liên quan đến việc Javascript lưu trữ dữ liệu float ở dạng nhị phân chính xác tới từng con số sau dấu phẩy. Hơn nữa máy tính không thể biểu diễn chính xác số thập phân, nên gây ra sai số kiểu này. Giải pháp ở đây có thể sử dụng hàm toFixed() để đạt được kết quả đúng.",
+      "d": "",
+      "type": "none",
+      "correct": "c",
+      "level": "",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Sự khác nhau giữa window.onload và onDocumentReady?",
+      "a": "",
+      "b": "Sự kiện window.onload có ý nghĩa rằng khi trình duyệt đã load xong mọi thứ (image, js, css) thì những đoạn code nằm bên trong đó mới được chạy. Với onDocumentReady, mọi thứ bên trong hàm này sẽ được load ngay khi DOM được load và trước khi toàn bộ nội dung bên ngoài được load.",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "b",
+      "level": "",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Kết quả của 1 + 2 + ‘3’?",
+      "a": "-33",
+      "b": "-6",
+      "c": "6",
+      "d": "33. 1 và 2 là kiểu integer, khi cộng lại sẽ được 3, sau đó sẽ nối với string ‘3’ để được kết quả là 33.",
+      "type": "none",
+      "correct": "d",
+      "level": "",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Promise trong javascript là gì?",
+      "a": "Promise là một cơ chế trong JavaScript giúp bạn thực thi các tác vụ bất đồng bộ mà không rơi vào callback hell hay pyramid of doom, là tình trạng các hàm callback lồng vào nhau ở quá nhiều tầng. Có 3 trạng thái: pending, fulfilled, reject.",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "level": "",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What is the object type?",
+      "level": "Entry",
+      "topic": "Object",
+      "description": ""
+    },
+    {
+      "question": "Explain arrays in JavaScript",
+      "level": "Entry",
+      "topic": "Array",
+      "description": ""
+    },
+    {
+      "question": "What is typeof operator?",
+      "level": "Entry",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Explain equality in JavaScript",
+      "level": "Entry",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What is Scope in JavaScript?",
+      "level": "Entry",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Explain what is Linear (Sequential) Search and when may we use one? JSP",
+      "Related To": "Searching, Python",
+      "level": "Junior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Explain Values and Types in JavaScript",
+      "level": "Junior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What is let keyword in JavaScript?",
+      "level": "Junior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Explain what is Binary Search JSJavaP",
+      "Related To": "Searching, Java",
+      "level": "Junior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Explain the same-origin policy with regards to JavaScript.",
+      "level": "Junior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What is the difference between == and ===?",
+      "level": "Junior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Is there anyway to force using strict mode in Node.js?",
+      "level": "Junior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Why would you use something like the load event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?",
+      "level": "Junior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What is strict mode?",
+      "level": "Junior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What's the difference between Host objects and Native objects?",
+      "level": "Junior",
+      "topic": "Object",
+      "description": ""
+    },
+    {
+      "question": "What language constructions do you use for iterating over object properties and array items?",
+      "level": "Junior",
+      "topic": "Array, Object",
+      "description": ""
+    },
+    {
+      "question": "What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?",
+      "level": "Junior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Explain event bubbling and how one may prevent it",
+      "level": "Junior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What does use strict do?",
+      "level": "Junior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?",
+      "level": "Junior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What is a Polyfill?",
+      "level": "Junior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Explain Null and Undefined in JavaScript",
+      "level": "Junior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What's the difference between throw Error('msg') vs throw new Error('msg')?",
+      "level": "Junior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What is Callback Hell and what is the main cause of it?",
+      "Related To": "Node.js",
+      "level": "Junior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Explain what is Interpolation Search JSP",
+      "Related To": "Searching, Python",
+      "level": "Mid",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What is IIFEs (Immediately Invoked Function Expressions)?",
+      "level": "Mid",
+      "topic": "Function",
+      "description": ""
+    },
+    {
+      "question": "What is Coercion in JavaScript?",
+      "level": "Mid",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What is the difference between a shim and a polyfill?",
+      "level": "Mid",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What is a Jump (or Block) Search? JSJavaP",
+      "Related To": "Searching, Python",
+      "level": "Mid",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What is the definition of a Higher-Order Function?",
+      "level": "Mid",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What do you think of AMD vs CommonJS?",
+      "level": "Mid",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Explain the differences on the usage of foo between function foo(){} and var foo = function(){}",
+      "level": "Mid",
+      "topic": "Function",
+      "description": ""
+    },
+    {
+      "question": "What is the drawback of creating true private in JavaScript?",
+      "level": "Mid",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What's the difference between .call and .apply?",
+      "level": "Mid",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What is the preferred syntax for defining enums in JavaScript?",
+      "level": "Mid",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Describe Closure concept in JavaScript as best as you could",
+      "level": "Mid",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Could you explain the difference between ES5 and ES6",
+      "level": "Mid",
+      "topic": "ES6",
+      "description": ""
+    },
+    {
+      "question": "When should we use generators in ES6?",
+      "level": "Mid",
+      "topic": "ES6",
+      "description": ""
+    },
+    {
+      "question": "Explain Function.prototype.bind.",
+      "level": "Mid",
+      "topic": "Function",
+      "description": ""
+    },
+    {
+      "question": "What are the benefits of using spread syntax in ES6 and how is it different from rest syntax?",
+      "level": "Mid",
+      "topic": "ES6",
+      "description": ""
+    },
+    {
+      "question": "When should I use Arrow Functions in ES6?",
+      "level": "Mid",
+      "topic": "ES6",
+      "description": ""
+    },
+    {
+      "question": "Explain the difference between undefined and not defined in JavaScript",
+      "level": "Mid",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What are the advantages and disadvantages of using use strict?",
+      "level": "Mid",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What is Currying?",
+      "level": "Mid",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What are the differences between ES6 class and ES5 function constructors?",
+      "level": "Mid",
+      "topic": "ES6, Function",
+      "description": ""
+    },
+    {
+      "question": "Why should we use ES6 classes?",
+      "level": "Mid",
+      "topic": "ES6",
+      "description": ""
+    },
+    {
+      "question": "Explain the difference between Object.freeze() vs const",
+      "level": "Mid",
+      "topic": "Object",
+      "description": ""
+    },
+    {
+      "question": "How to compare two objects in JavaScript?",
+      "level": "Mid",
+      "topic": "Object",
+      "description": ""
+    },
+    {
+      "question": "What will be the output of the following code?",
+      "level": "Mid",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What is a closure, and how/why would you use one?",
+      "level": "Mid",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What will be the output of the following code?",
+      "level": "Mid",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What's a typical use case for anonymous functions?",
+      "level": "Mid",
+      "topic": "Function",
+      "description": ""
+    },
+    {
+      "question": "Suggest one simple way of removing duplicates from an array using ES6",
+      "level": "Mid",
+      "topic": "Array, ES6",
+      "description": ""
+    },
+    {
+      "question": "What is generator in JS?",
+      "level": "Mid",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What is the difference between document load event and document DOMContentLoaded event?",
+      "level": "Mid",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What's the difference between using let and var to declare a variable in ES6?",
+      "level": "Mid",
+      "topic": "ES6",
+      "description": ""
+    },
+    {
+      "question": "What is the motivation for bringing Symbol to ES6?",
+      "level": "Mid",
+      "topic": "ES6",
+      "description": ""
+    },
+    {
+      "question": "Why is extending built-in JavaScript objects not a good idea?",
+      "level": "Mid",
+      "topic": "Object",
+      "description": ""
+    },
+    {
+      "question": "What advantages are using arrow functions?",
+      "level": "Mid",
+      "topic": "Function",
+      "description": ""
+    },
+    {
+      "question": "What is the difference between Anonymous and Named functions? ",
+      "level": "Mid",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What is export default in JavaScript?",
+      "Related To": "Node.js",
+      "level": "Mid",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What is the new keyword in JavaScript?",
+      "level": "Senior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Explain Prototype Inheritance in JavaScript?",
+      "level": "Senior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What does the term Transpiling stand for?",
+      "level": "Senior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Can you give an example for destructuring an object or an array in ES6?",
+      "level": "Senior",
+      "topic": "Array, Object, ES6",
+      "description": ""
+    },
+    {
+      "question": "Explain the Prototype Design Pattern",
+      "level": "Senior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Describe the JS module design pattern",
+      "level": "Senior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Can you describe the main difference between a .forEach loop and a .map() loop and why you would pick one versus the other?",
+      "level": "Senior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Explain what is Hoisting in Javascript",
+      "level": "Senior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "How can you share code between files?",
+      "level": "Senior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What are the actual uses of ES6 WeakMap?",
+      "level": "Senior",
+      "topic": "ES6",
+      "description": ""
+    },
+    {
+      "question": "Explain difference between: function Person(){}, var person = Person(), and var person = new Person()?",
+      "level": "Senior",
+      "topic": "Function",
+      "description": ""
+    },
+    {
+      "question": "Check if a given string is a isomorphic",
+      "level": "Senior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What is Hoisting in JavaScript?",
+      "level": "Senior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "When should you NOT use arrow functions in ES6? Name three or more cases.",
+      "level": "Senior",
+      "topic": "ES6, Function",
+      "description": ""
+    },
+    {
+      "question": "null, undefined or undeclared? How would you go about checking for any of these states?",
+      "level": "Senior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What is the Temporal Dead Zone in ES6?",
+      "level": "Senior",
+      "topic": "ES6",
+      "description": ""
+    },
+    {
+      "question": "Explain how JSONP works (and how it's not really Ajax)",
+      "level": "Senior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Could you compare usage of Module Pattern vs Constructor/Prototype pattern?",
+      "level": "Senior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What tools can be used to assure consistent code style?",
+      "level": "Senior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Does JavaScript have a map function to iterate over an object properties?",
+      "Related To": "Node.js",
+      "level": "Senior",
+      "topic": "Object, Function",
+      "description": ""
+    },
+    {
+      "question": "When would you use import * as X from 'X' ?",
+      "Related To": "Node.js",
+      "level": "Senior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "How would you prevent Callback Hell without using promises, async or generators?",
+      "Related To": "Node.js",
+      "level": "Senior",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "What's the difference between ES6 Map and WeakMap?",
+      "level": "Expert",
+      "topic": "ES6",
+      "description": ""
+    },
+    {
+      "question": "What is the difference between the await keyword and the yield keyword? ",
+      "level": "Expert",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Compare Async/Await and Generators usage to achive same functionality",
+      "level": "Expert",
+      "topic": "Function",
+      "description": ""
+    },
+    {
+      "question": "How to deep-freeze object in JavaScript?",
+      "level": "Expert",
+      "topic": "Object",
+      "description": ""
+    },
+    {
+      "question": "Is it possible to reset an ECMAScript 6 generator to its initial state?",
+      "level": "Expert",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Is JavaScript a pass-by-reference or pass-by-value language?",
+      "level": "Expert",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "In JavaScript, why is the this operator inconsistent?",
+      "level": "Expert",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "Can you give an example of a curry function and why this syntax offers an advantage?",
+      "level": "Expert",
+      "topic": "Function",
+      "description": ""
+    },
+    {
+      "question": "Does JavaScript pass by references or pass by values?",
+      "Related To": "Node.js",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
       "a": "",
       "b": "",
       "c": "",
       "d": "",
-      "type": "boolean",
-      "correct": "true"
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
     },
     {
-      "question": "Question 03",
-      "a": "Its a",
-      "b": "Its b",
-      "c": "Its c",
-      "d": "Its d",
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "type": "none",
+      "correct": "a",
+      "topic": "",
+      "description": ""
+    },
+    {
+      "question": "",
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
       "type": "none",
       "correct": "a"
     }

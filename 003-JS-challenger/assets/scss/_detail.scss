@@ -1,19 +1,37 @@
+.quiz-container,
+.quiz-questions,
+#answers-4option ul,
+#answers-2option ul {
+  width: 100%;
+}
 .quiz-questions {
   background-color: #eef183;
 }
-
+.quiz-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+#answers-4option,
+#answers-2option {
+  flex: 1;
+  background-color: blanchedalmond;
+}
 #question {
-  font-size: 3rem;
-  margin-bottom: 2rem;
+  // font-size: 3rem;
+  padding: 1rem 2rem;
 }
 
 .answer-option {
   padding: 1rem 2rem;
   background: #13c29c;
-  min-width: 400px;
+  // min-width: 400px;
+  width: 100%;
   opacity: 70%;
   &:hover {
     opacity: 100%;
+  }
+  & label {
+    width: 300px;
   }
 }
 .selected {

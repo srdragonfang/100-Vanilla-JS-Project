@@ -17,6 +17,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: aliceblue;
 }
 
 li {
@@ -26,6 +27,17 @@ li {
 input,
 button {
   font-size: inherit;
+}
+
+.section {
+  width: 50vw;
+  padding: 1rem;
+}
+
+.row {
+  margin-bottom: 1rem;
+  float: left;
+  width: 100%;
 }
 
 .flex-col {
@@ -56,6 +68,7 @@ button {
 }
 .btn-option {
   padding: 1rem 2rem;
+  max-width: 150px;
 }
 .btn-option:hover {
   background: #191919;
@@ -68,23 +81,47 @@ button {
   opacity: 100%;
 }
 
+.row .btn {
+  margin: 1rem;
+}
+
+.quiz-container,
+.quiz-questions,
+#answers-4option ul,
+#answers-2option ul {
+  width: 100%;
+}
+
 .quiz-questions {
   background-color: #eef183;
 }
 
+.quiz-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+#answers-4option,
+#answers-2option {
+  flex: 1;
+  background-color: blanchedalmond;
+}
+
 #question {
-  font-size: 3rem;
-  margin-bottom: 2rem;
+  padding: 1rem 2rem;
 }
 
 .answer-option {
   padding: 1rem 2rem;
   background: #13c29c;
-  min-width: 400px;
+  width: 100%;
   opacity: 70%;
 }
 .answer-option:hover {
   opacity: 100%;
+}
+.answer-option label {
+  width: 300px;
 }
 
 .selected {
