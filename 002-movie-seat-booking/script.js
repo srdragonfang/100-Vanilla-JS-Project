@@ -8,8 +8,6 @@ const movieTrailer = document.querySelector(".movie-trailer");
 
 let ticketPrice = +movieSelect.value;
 
-populateUI();
-// console.log(ticketPrice);
 loadSeats();
 loadTrailer(+movieSelect.value);
 function loadSeats() {
@@ -39,10 +37,6 @@ function selectedCount() {
   const dbseatsIndex = [...dbseatSelecteds].map((dbseat) => {
     [...dbseats].indexOf(dbseat);
   });
-  localStorage.setItem(
-    "seatSelecteds3",
-    JSON.stringify(seatsIndex, dbseatsIndex)
-  );
 
   const formatCount = function (count) {
     return count < 10 ? `0${count}` : count;
@@ -53,17 +47,7 @@ function selectedCount() {
     seatSelecteds.length * ticketPrice +
     dbseatSelecteds.length * ((ticketPrice * 2 * (100 + 5)) / 100);
 }
-function populateUI() {
-  const seatSelecteds = JSON.parse(localStorage.getItem("seatSelecteds3"));
 
-  if (seatSelecteds !== null && seatSelecteds.length > 0) {
-    seats.forEach((seat, index) => {
-      if (seatSelecteds.indexOf(index) > -1) {
-        seat.classList.add("selected");
-      }
-    });
-  } /* thêm class selected vào seat được select */
-}
 
 function loadTrailer(index) {
   if (index == 19) {
@@ -78,9 +62,6 @@ function loadTrailer(index) {
   if (index == 15) {
     movieTrailer.src = "https://www.youtube.com/embed/TfyunOnMGqM";
   }
-  // if (movieSelect[3].dataset.idx == 4) {
-  //   movieTrailer.innerHTML =
-  // }
 }
 
 movieSelect.addEventListener("change", (e) => {
