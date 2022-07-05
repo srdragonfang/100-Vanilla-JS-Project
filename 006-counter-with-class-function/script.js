@@ -46,4 +46,4 @@ class Counter {
     }
 }
 
-firstCounter = new Counter(getElement('.first-counter'), 000)
+firstCounter = new Counter(getElement('.first-counter'), 100)
