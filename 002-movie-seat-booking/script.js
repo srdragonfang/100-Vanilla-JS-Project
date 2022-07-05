@@ -1,20 +1,17 @@
-// ! task:
-// 1. [o] thuc hien su kien khi click vao seat
-// 2. [o] dem so seat khi thuc hien event select
-// 3. [o] tinh tong so tien phai tra dua vao gia ve phim
-// 4. [o] thay doi gia tien ve xem phim
-// 5. [x] set & get localStorage
-
 const seats = document.querySelectorAll(".seat:not(.occupied)");
+const dbseats = document.querySelectorAll(".dbseat:not(.occupied)");
 const occupieds = document.querySelectorAll(".seat.occupied");
 const count = document.getElementById("count");
 const total = document.getElementById("total");
 const movieSelect = document.getElementById("movie");
+const movieTrailer = document.querySelector(".movie-trailer");
 
 let ticketPrice = +movieSelect.value;
+
 populateUI();
 // console.log(ticketPrice);
 loadSeats();
+loadTrailer(+movieSelect.value);
 function loadSeats() {
   seats.forEach((seat) => {
     seat.addEventListener("click", (e) => {
@@ -22,18 +19,39 @@ function loadSeats() {
       selectedCount();
     });
   });
+  dbseats.forEach((dbseat) => {
+    dbseat.addEventListener("click", (e) => {
+      dbseat.classList.toggle("selected");
+      selectedCount();
+    });
+  });
 }
 
 function selectedCount() {
-  const seatSelecteds = document.querySelectorAll(".row .selected");
+  const seatSelecteds = document.querySelectorAll(".row .seat.selected");
+  const dbseatSelecteds = document.querySelectorAll(".row .dbseat.selected");
   // seatSelecteds -> khong the khai bao ben ngoai ham selectedCount
   // boi vi no se khong thay doi hay reset lai gia tri/so dem khi ham loadSeats thuc hien.
   const seatsIndex = [...seatSelecteds].map((seat) => {
     [...seats].indexOf(seat);
+    console.log([...seats].indexOf(seat));
   });
-  localStorage.setItem("seatSelecteds3", JSON.stringify(seatsIndex));
-  count.innerText = seatSelecteds.length;
-  total.innerText = seatSelecteds.length * ticketPrice;
+  const dbseatsIndex = [...dbseatSelecteds].map((dbseat) => {
+    [...dbseats].indexOf(dbseat);
+  });
+  localStorage.setItem(
+    "seatSelecteds3",
+    JSON.stringify(seatsIndex, dbseatsIndex)
+  );
+
+  const formatCount = function (count) {
+    return count < 10 ? `0${count}` : count;
+  };
+  count.innerText = formatCount(seatSelecteds.length + dbseatSelecteds.length);
+
+  total.innerText =
+    seatSelecteds.length * ticketPrice +
+    dbseatSelecteds.length * ((ticketPrice * 2 * (100 + 5)) / 100);
 }
 function populateUI() {
   const seatSelecteds = JSON.parse(localStorage.getItem("seatSelecteds3"));
@@ -46,7 +64,27 @@ function populateUI() {
     });
   } /* thêm class selected vào seat được select */
 }
+
+function loadTrailer(index) {
+  if (index == 19) {
+    movieTrailer.src = "https://www.youtube.com/embed/Wg86eQkdudI";
+  }
+  if (index == 21) {
+    movieTrailer.src = "https://www.youtube.com/embed/V75dMMIW2B4";
+  }
+  if (index == 17) {
+    movieTrailer.src = "https://www.youtube.com/embed/8g18jFHCLXk";
+  }
+  if (index == 15) {
+    movieTrailer.src = "https://www.youtube.com/embed/TfyunOnMGqM";
+  }
+  // if (movieSelect[3].dataset.idx == 4) {
+  //   movieTrailer.innerHTML =
+  // }
+}
+
 movieSelect.addEventListener("change", (e) => {
   ticketPrice = e.target.value;
+  loadTrailer(+movieSelect.value);
   selectedCount();
 });
