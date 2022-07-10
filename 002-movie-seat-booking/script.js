@@ -32,7 +32,6 @@ function selectedCount() {
   // boi vi no se khong thay doi hay reset lai gia tri/so dem khi ham loadSeats thuc hien.
   const seatsIndex = [...seatSelecteds].map((seat) => {
     [...seats].indexOf(seat);
-    console.log([...seats].indexOf(seat));
   });
   const dbseatsIndex = [...dbseatSelecteds].map((dbseat) => {
     [...dbseats].indexOf(dbseat);
