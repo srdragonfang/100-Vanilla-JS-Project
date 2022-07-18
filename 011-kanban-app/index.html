@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sokunmaru | Desk</title>
+
+		<link rel="stylesheet" href="styles/index.css" />
+		<link rel="shortcut icon" href="#" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/80ea5533be.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<!-- ANCHOR *** [CENTER] -->
+		<div class="section-wrapper">
+			<!-- ANCHOR scrum app -->
+			<section class="section section-four">
+				<div class="scrum-app" id="kanbanApp">
+					<div class="scrum-header">
+						<h1>Kanban Board</h1>
+						<div class="scrum-taskbar">
+							<textarea
+								id="task-input"
+								name=""
+								placeholder="add task here..."
+								cols="20"
+								min-rows="1"
+								oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'
+								required
+							></textarea>
+							<select id="task-statusTask">
+								<option value="higher">Higher</option>
+								<option value="high">High</option>
+								<option value="medium" selected="selected">
+									Medium
+								</option>
+								<option value="low">Low</option>
+								<option value="lower">Lower</option>
+							</select>
+							<select id="task-statusGroup">
+								<option value="Backlog" selected="selected">
+									Backlog
+								</option>
+								<option value="InProgress">In Progress</option>
+								<option value="Emergency">Emergency</option>
+								<option value="Testing">Testing</option>
+								<option value="Done">Done</option>
+							</select>
+							<button type="submit" id="task-submit">
+								Submit
+							</button>
+						</div>
+						<p>
+							<span>
+								<strong>Double Click</strong> to edit task -
+							</span>
+							<span>
+								<strong>Right Click</strong> to delete task
+							</span>
+						</p>
+					</div>
+					<div class="scrum-dashboard">
+						<div class="scrum-col odd">
+							<h3>Backlog</h3>
+							<div
+								class="scrum-list"
+								id="backlog"
+								ondrop="drop(event)"
+								ondragover="allowDrop(event)"
+								ondragenter="dragEnter(0)"
+							></div>
+						</div>
+						<div class="scrum-col even">
+							<h3>In Progress</h3>
+							<div
+								class="scrum-list"
+								id="inprogress"
+								ondrop="drop(event)"
+								ondragover="allowDrop(event)"
+								ondragenter="dragEnter(1)"
+							></div>
+						</div>
+						<div class="scrum-col odd">
+							<h3>Emergency</h3>
+							<div
+								class="scrum-list"
+								id="emergency"
+								ondrop="drop(event)"
+								ondragover="allowDrop(event)"
+								ondragenter="dragEnter(2)"
+							></div>
+						</div>
+						<div class="scrum-col even">
+							<h3>Testing</h3>
+							<div
+								class="scrum-list"
+								id="testing"
+								ondrop="drop(event)"
+								ondragover="allowDrop(event)"
+								ondragenter="dragEnter(3)"
+							></div>
+						</div>
+						<div class="scrum-col odd">
+							<h3>Done</h3>
+							<div
+								class="scrum-list"
+								id="done"
+								ondrop="drop(event)"
+								ondragover="allowDrop(event)"
+								ondragenter="dragEnter(4)"
+							></div>
+						</div>
+						<div class="scrum-col even hide">
+							<h3>Remove</h3>
+							<div class="scrum-list" id="remove"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- ANCHOR *** [SCRIPT] -->
+		<script src="appScrum.js"></script>
+	</body>
+</html>

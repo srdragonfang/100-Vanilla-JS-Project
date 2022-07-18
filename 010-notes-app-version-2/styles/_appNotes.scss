@@ -1,0 +1,134 @@
+.noteApp-container {
+    width: 100%;
+    // height: 100%;
+}
+.notes {
+    position: absolute;
+	width: max-content;
+	height: max-content;
+	right: 1rem;
+	bottom: 1rem;
+	@include flexbox(column, flex-start);
+	&-list {
+		width: 100%;
+        height: 100%;
+		// background: brown;
+		flex: 1;
+		padding: 1rem;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		gap: 1rem;
+		& h1 {
+			margin: 1rem 0;
+		}
+		&::-webkit-scrollbar {
+			background: #19191975;
+			width: 5px;
+			// display: none;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: #191919;
+		}
+	}
+
+	& .btn-func {
+		margin: 1rem 0;
+	}
+}
+
+.note {
+	@include flexbox(column, none);
+	background: rgba(245, 200, 86, 0.95);
+	color: #191919bf;
+	font-weight: 500;
+	border-radius: 5px;
+	// width: auto;
+	max-width: 300px;
+	min-width: 150px;
+	// height: 200px;
+	box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.3);
+	height: min-content;
+	&-bar {
+		@include flexbox(row, flex-end);
+		background: rgba(244, 94, 94, 0.864);
+		// height: 50px;
+		padding: 1rem 1rem 1rem 0;
+		width: 100%;
+
+		& h3 {
+            flex: 1;
+			margin: 0 1rem;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			font-size: 1.6rem;
+		}
+        & i:first-of-type {
+            font-size: 1.6rem;
+        }
+		& i + i {
+			margin-left: 1rem;
+		}
+	}
+	& input {
+		width: 100%;
+		background: transparent;
+		font-family: transparent;
+		padding: 0.5rem;
+		font-size: 2rem;
+		border: none;
+		outline: none;
+	}
+
+	&-title {
+		width: 60%;
+	}
+	&-text {
+		width: 100%;
+		font-family: transparent;
+		background: transparent;
+		min-height: max-content !important;
+		resize: none;
+		padding: 1rem;
+		font-size: 2rem;
+		border: none;
+		outline: none;
+		overflow-y: scroll;
+		white-space: pre-wrap;
+		text-align: left !important;
+		&:active,
+		&:focus {
+			border: none;
+			outline: none;
+		}
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+}
+
+.create-note {
+	width: 400px;
+	& .note-text {
+		max-height: 300px !important;
+	}
+}
+
+#note-pin {
+	opacity: 50%;
+}
+.pinNote {
+	position: fixed;
+	width: max-content;
+	height: max-content;
+	right: 1rem;
+	bottom: 1rem;
+	// right: 0;
+	& #note-pin {
+		transform: rotate(30deg);
+		opacity: 100%;
+	}
+}
