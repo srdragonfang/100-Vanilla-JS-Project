@@ -1,0 +1,38 @@
+.section-three .main-left {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border: 2px groove goldenrod;
+}
+.section-three .main-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  // height: 100%;
+  width: 30%;
+  height: 100%;
+  padding: 1rem;
+}
+
+.btn {
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &-func {
+    border: none;
+    outline: none;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.075rem;
+    background-color: goldenrod;
+    color: #f9f9f9;
+  }
+}

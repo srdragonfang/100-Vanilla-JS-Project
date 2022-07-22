@@ -1,0 +1,72 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  font-size: 20px;
+}
+body {
+  line-height: 1.5rem;
+  background-color:  #1b1b32;
+}
+
+main {
+  background-color: whitesmoke;
+  margin: 3rem;
+  padding: 3rem;
+  box-shadow: 2px 2px 8px whitesmoke;
+  width: 786px;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+p {
+  color: #1b1b32;
+  font-style: italic;
+  opacity: 70%;
+}
+select, input {
+  border: 0;
+  border-bottom: solid 3px #1b1b32;
+  background-color: transparent;
+  transition: 1s;
+  outline: none;
+}
+.box-box {
+  border-radius: 5px;
+  padding: .5rem 1rem .5rem 1rem;
+  width: 100%;
+}
+span {
+  color: red;
+}
+textarea {
+  resize: none;
+  height: 150px;
+}
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  text-shadow: 2px 2px 18px #1b1b32;
+  color: #1b1b32;
+}
+#submit {
+  background-color: #1b1b32;
+  color: whitesmoke;
+  font-style: bold;
+  font-weight: 600;
+  cursor: pointer;
+
+}
+#submit:hover {
+  background-color: #242442;
+}
+.select__btn {
+  margin: .5rem;
+}
+
+#checkbox-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

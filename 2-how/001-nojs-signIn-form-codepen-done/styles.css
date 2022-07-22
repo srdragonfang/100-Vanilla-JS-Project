@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+}
+h2 {
+  color: white;
+  font-size: 3rem;
+}
+.signin-bg {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(95, 158, 160);
+  background: linear-gradient(
+    90deg,
+    rgba(95, 158, 160, 1) 0%,
+    rgba(136, 201, 203, 1) 46%,
+    rgba(157, 224, 226, 1) 70%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  width: min(500px, calc(70% + 100px));
+  padding: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: #191919;
+  box-shadow: 2px 2px 8px black;
+}
+
+input::placeholder {
+  color: white;
+  filter: invert(50%);
+}
+
+.input {
+  outline: none;
+  margin: 1rem;
+  color: white;
+  border: none;
+  border-bottom: 1px solid white;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.377);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+.submit {
+  outline: none;
+  margin: 1rem;
+  color: white;
+  border: none;
+  background-color: transparent;
+  font-size: 30px;
+  cursor: pointer;
+}

@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #444;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background: rgba(178, 131, 226, 0.261);
+}
+
+h1 {
+  color: rgb(179, 131, 226);
+  font-size: 3rem;
+  text-align: center;
+}
+
+.todoApp {
+  margin-top: 10rem;
+  border: 0.1px solid lightgray;
+  border-radius: 5px;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  box-shadow: 0 0px 2px lightgray;
+}
+.scrum-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.todoApp-tools {
+  height: 50px;
+}
+
+.todoApp-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.todoList {
+  /* overflow-y: scroll; */
+  /* height: 300px; */
+  display: flex;
+  flex-direction: column;
+}
+.todoList::-webkit-scrollbar {
+  display: none;
+}
+.status {
+  width: 200px !important;
+  height: 600px !important;
+}
+.status + .status {
+  margin-left: 1rem !important;
+}
+.todo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(181, 142, 220, 0.261);
+  color: #191919bd;
+  padding: 0.5rem 1rem;
+  border: 0.1px solid lightgray;
+  border-radius: 5px;
+  position: relative;
+}
+.todo:not(.completed) {
+  order: 2;
+  animation: undone 0.5s;
+}
+.todo.completed {
+  order: 3;
+  animation: done 0.5s;
+}
+.todo + .todo {
+  margin-top: 0.1rem;
+}
+.todo-item {
+  flex: 1;
+  text-transform: capitalize;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 30%;
+}
+.todoApp form input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 0.1px solid lightgray;
+  border-radius: 5px;
+  font-size: 16px;
+  letter-spacing: 0.075rem;
+  margin-top: 1rem;
+}
+.done {
+  order: 3;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+@keyframes done {
+  0% {
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@keyframes undone {
+  0% {
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
+.todo-btn {
+  z-index: 1001;
+  position: relative;
+}
+
+.todo-tools {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #f5f5f5;
+  color: #191919bd;
+  border: 0.1px solid lightgray;
+  border-radius: 5px;
+  z-index: 1001;
+}
+.todo-tool {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+.todo-tool:hover {
+  background: rgb(179, 131, 226);
+}
+
+.todo-tools.active {
+  display: flex;
+}
+.chapter {
+  counter-reset: chapter;
+  background: rgb(135, 16, 239) !important;
+  color: white !important;
+}
+.chapter::before {
+  counter-increment: chapter;
+  content: "Chapter " counter(chapter) ":";
+  margin-right: 0.5rem;
+}
+.scene {
+  counter-reset: scene;
+  background: lightcoral !important;
+  color: white !important;
+}
+.scene::before {
+  counter-increment: scene;
+  content: "Scene " counter(scene) ":";
+  margin-right: 0.5rem;
+}
+.import {
+  counter-reset: import;
+  background: red !important;
+  color: white !important;
+}
+.import::before {
+  counter-increment: import;
+  content: "!!! " counter(import) ":";
+  margin-right: 0.5rem;
+}
+.status-2 .todo {
+  background-color: rgb(161, 240, 175);
+}
+.status-3 .todo {
+  background-color: red;
+  color: white;
+}
+.status-6 .todo {
+  background-color: rgb(255, 255, 255);
+  color: #191919;
+  text-decoration: line-through;
+  opacity: 50%;
+}
+
+.status-4 .todo {
+  background-color: tomato;
+}
+.status-4 {
+  display: none;
+}
+.status-7 {
+  display: none;
+}
+.status-7 .todo {
+  background-color: #191919;
+  color: white;
+}

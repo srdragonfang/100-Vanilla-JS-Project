@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sokunmaru | Desk</title>
+
+		<link rel="stylesheet" href="styles/index.css" />
+		<link rel="shortcut icon" href="#" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/80ea5533be.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<!-- ANCHOR *** [HEADER] -->
+
+		<!-- ANCHOR *** [CENTER] -->
+		<div class="section-wrapper">
+			<section class="section section-three">
+				<div class="noteApp-container">
+					<h1>Notes</h1>
+					<div class="notes" id="noteApp">
+						<div class="note create-note">
+							<div class="note-bar flex-row">
+								<input
+									class="input-title"
+									type="text"
+									name=""
+									id=""
+									placeholder="Title..."
+									maxlength="50"
+									required
+								/>
+								<i
+									class="fa-solid fa-thumbtack"
+									id="note-pin"
+								></i>
+								<i
+									class="fa-solid fa-square-plus btn-noteAdd"
+								></i>
+							</div>
+                            <p class="note-alert"></p>
+							<textarea
+								class="note-text input-text"
+								cols="20"
+								name="text"
+								oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'
+								required
+							></textarea>
+						</div>
+						<h4 class="note-alert"></h4>
+					</div>
+					<div class="notes-list">
+						<!-- * input note -->
+					</div>
+				</div>
+			</section>
+		</div>
+
+
+		<!-- ANCHOR *** [SCRIPT] -->
+		<script src="appNotes.js"></script>
+
+	</body>
+</html>

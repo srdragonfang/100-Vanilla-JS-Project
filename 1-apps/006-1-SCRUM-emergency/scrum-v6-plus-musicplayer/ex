@@ -1,0 +1,31 @@
+<form id="form-1" class="todoApp-container">
+  <input type="text" name="" id="" placeholder="Add todo here..." />
+  <div class="todoApp-wrapper">
+    <div class="todoApp-header">
+      <ul>
+        <li>Blacklog</li>
+        <li>In Progress</li>
+        <li>Emergency</li>
+        <li>Testing</li>
+        <li>Done</li>
+      </ul>
+    </div>
+    <div class="todoApp-dashboard" id="dashboard">
+      <div class="blacklog" id="blacklog"></div>
+      <div class="progess" id="progress"></div>
+      <div class="emergency" id="emergency"></div>
+      <div class="testing" id="testing"></div>
+      <div class="done" id="done"></div>
+    </div>
+  </div>
+</form>
+
+.todoApp { margin-top: 10rem; border: 0.1px solid lightgray; border-radius: 5px;
+padding: 0 0.5rem; display: flex; flex-direction: column; padding: 1rem;
+box-shadow: 0 0px 2px lightgray; } .todoApp-container { display: flex;
+flex-direction: column; } .todoApp form input { border: none; outline: none;
+background: var(--clr-light); width: 100%; border: 0.1px solid lightgray;
+border-radius: 5px; letter-spacing: 0.075rem; padding: 0.5rem 1rem; margin: 1rem
+0; } /* .todoApp-wrapper { padding-top: 1rem; } */ .todoApp-header ul { display:
+flex; flex-direction: row; } .todoApp-header ul li { width: 200px; text-align:
+center; text-transform: uppercase; padding: 0.5rem 1rem; }

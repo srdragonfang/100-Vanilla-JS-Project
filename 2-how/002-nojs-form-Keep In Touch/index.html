@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keep In Touch</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="main">
+      <h1 id="title">Keep In Touch</h1>
+      <p id="description">
+        Your answers will be anonymous, and we will use responses to improve all
+        our work. Thank you for your time!
+      </p>
+      <form id="survey-form">
+        <label id="name-label" for="name">
+          <h3>Name<span>*</span>:</h3>
+          <input
+            id="name"
+            class="box-box"
+            type="name"
+            placeholder="Enter your name"
+            required
+          />
+        </label>
+
+        <label id="email-label" for="email">
+          <h3>Email<span>*</span>:</h3>
+          <input
+            id="email"
+            class="box-box"
+            type="email"
+            placeholder="Enter your email"
+            required
+          />
+        </label>
+
+        <label id="number-label" for="number">
+          <h3>Number:</h3>
+          <input
+            id="number"
+            class="box-box"
+            type="number"
+            placeholder="Enter your number"
+            min="1"
+            max="5"
+          />
+        </label>
+
+        <label>
+          <h3>Sex:</h3>
+          <select type="select" id="dropdown" class="box-box">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+
+        <label>
+          <h3>Do you like reading books?</h3>
+          <input
+            type="radio"
+            name="favorite__book"
+            value="yes"
+            class="select__btn"
+          />Yes
+          <input
+            type="radio"
+            name="favorite__book"
+            value="no"
+            class="select__btn"
+          />No
+          <input
+            type="radio"
+            name="favorite__book"
+            value="maybe"
+            class="select__btn"
+          />Maybe
+        </label>
+        <div>
+          <h3>What kinds of book do you like?</h3>
+          <label id="checkbox-box">
+            <input
+              type="checkbox"
+              value="biographies"
+              class="select__btn"
+            />Biographies
+            <input
+              type="checkbox"
+              value="historical"
+              class="select__btn"
+            />Historical
+            <input type="checkbox" value="science" class="select__btn" />Science
+            <input
+              type="checkbox"
+              value="mysteries"
+              class="select__btn"
+            />Mysteries
+            <input type="checkbox" value="fantasy" class="select__btn" />Fantasy
+            <input type="checkbox" value="other" class="select__btn" />Other
+          </label>
+        </div>
+
+        <label>
+          <h3>Decribe your favourite book:</h3>
+          <textarea
+            id="text-area"
+            class="box-box"
+            type="text"
+            placeholder="You can write here!"
+          ></textarea>
+        </label>
+        <button id="submit" class="box-box" type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>

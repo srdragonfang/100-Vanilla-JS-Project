@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/80ea5533be.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="todoApp">
+      <h1>SCRUM</h1>
+      <form id="form-1" onsubmit="addNewTodo()" class="todoApp-container">
+        <input id="inputText" type="text" placeholder="Todo..." />
+
+        <div class="scrum-container">
+          <div class="">
+            <h2 class="done">Blacklog</h2>
+            <div class="status todoList"></div>
+          </div>
+          <div class="status-2">
+            <h2 class="done">In progess</h2>
+            <div class="status todoList"></div>
+          </div>
+          <div class="status-3">
+            <h2 class="done">Emergency</h2>
+            <div class="status todoList"></div>
+          </div>
+          <div class="status-4">
+            <h2 class="done">Pause</h2>
+            <div class="status todoList"></div>
+          </div>
+          <div class="status-5">
+            <h2 class="done">Testing</h2>
+            <div class="status todoList"></div>
+          </div>
+          <div class="status-6">
+            <h2 class="done">Done</h2>
+            <div class="status todoList"></div>
+          </div>
+          <div class="status-7">
+            <h2 class="done">Delete</h2>
+            <div class="status todoList"></div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>

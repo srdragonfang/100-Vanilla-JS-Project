@@ -1,0 +1,57 @@
+.clock {
+	@include flexbox(row, none);
+	font-size: 7rem;
+	background-color: inherit;
+	width: 280px;
+	padding: 0.5rem 1rem;
+	margin-bottom: 1rem;
+	border: 4px solid transparent;
+	box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+		inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+		0 15px 15px rgba(0, 0, 0, 0.3), inset 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.date {
+	font-size: 3rem;
+}
+.weather {
+	&-info {
+		&-top {
+			@include flexbox(column, center);
+			min-height: 70px;
+			padding: 0.5rem 1rem;
+		}
+		&-city {
+			font-size: 3rem;
+		}
+
+		&-detail {
+			@include flexbox(column, space-around);
+		}
+		&-status {
+			@include flexbox(row, center);
+		}
+	}
+	&-search {
+		&-bar {
+			outline: none;
+			border: none;
+			background: transparent;
+			padding: 1rem 2rem;
+			color: inherit;
+			font-size: 2rem;
+		}
+	}
+}
+.clock-buttons {
+	@include flexbox(column, center);
+}
+#startPomodoro {
+	background-color: yellow;
+}
+#startPomodoro {
+	background-color: yellow;
+}
+#resetPomodoro {
+	background-color: red;
+}

@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #444;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background: rgba(178, 131, 226, 0.261);
+}
+
+h1 {
+  color: rgb(179, 131, 226);
+  font-size: 3rem;
+  text-align: center;
+}
+
+.todoApp {
+  margin-top: 10rem;
+  width: 400px;
+  border: 0.1px solid lightgray;
+  border-radius: 5px;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  box-shadow: 0 0px 2px lightgray;
+}
+.todoApp-tools {
+  height: 50px;
+}
+
+.todoApp-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.todoList {
+  height: 400px;
+  overflow-y: scroll;
+  height: 300px;
+}
+.todoList::-webkit-scrollbar {
+  display: none;
+}
+.todo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(181, 142, 220, 0.261);
+  color: #191919bd;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 0.1px solid lightgray;
+  border-radius: 5px;
+}
+.todo + .todo {
+  margin-top: 0.1rem;
+}
+.todo-item {
+  width: 100%;
+}
+.completed {
+  /* background: brown; */
+  text-decoration: line-through;
+  opacity: 30%;
+}
+.todoApp form input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 0.1px solid lightgray;
+  border-radius: 5px;
+  font-size: 16px;
+  letter-spacing: 0.075rem;
+  margin-top: 1rem;
+}
